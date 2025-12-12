@@ -8,7 +8,6 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const pathname = usePathname(); //
   const { replace } = useRouter();
   const handleSearch = useDebouncedCallback((term: string) => {
-    console.log("Seraching ... ", term);
     const params = new URLSearchParams(searchParam); // params become iterable object like map
     if (term) {
       params.set("query", term); // you can set the query prop
